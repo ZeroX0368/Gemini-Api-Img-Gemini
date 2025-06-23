@@ -10,7 +10,7 @@ const PORT = 5000;
 // Serve static files from the current directory
 app.use('/images', express.static(process.cwd()));
 
-const ai = new GoogleGenAI({ apiKey: "You Apikey" });
+const ai = new GoogleGenAI({ apiKey: "Gemini Apikey" });
 
 app.get("/api/gemini", async (req, res) => {
   try {
@@ -68,7 +68,8 @@ app.get("/api/image", async (req, res) => {
         fs.writeFileSync(filepath, buffer);
         console.log(`Image saved as ${filename}`);
         
-        const imageUrl = `http://0.0.0.0:${PORT}/images/${filename}`;
+        const baseUrl = `${req.protocol}://${req.get('host')}`;
+        const imageUrl = `${baseUrl}/images/${filename}`;
         
         return res.json({
           success: true,
