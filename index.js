@@ -10,7 +10,7 @@ const PORT = 5000;
 // Serve static files from the current directory
 app.use('/images', express.static(process.cwd()));
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyDYrzBFmFiD39OrARGPKaDhqv9XsUaxlWw" });
+const ai = new GoogleGenAI({ apiKey: "GEMINI APIKEY" });
 
 app.get("/api/gemini", async (req, res) => {
   try {
