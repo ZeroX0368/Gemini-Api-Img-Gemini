@@ -44,7 +44,7 @@ app.get('/api/ai/gemini', verifyApiKey, async (req, res) => {
       return res.status(400).json({ error: "Prompt parameter is required" });
     }
 
-    const apiKey = "AIzaSyDYrzBFmFiD39OrARGPKaDhqv9XsUaxlWw";
+    const apiKey = "GEMINI APIKEY";
     
     const ai = new GoogleGenAI({ apiKey });
     
@@ -72,7 +72,7 @@ app.get('/api/generate/image', verifyApiKey, async (req, res) => {
       return res.status(400).json({ error: "Prompt parameter is required" });
     }
 
-    const apiKey = "AIzaSyDYrzBFmFiD39OrARGPKaDhqv9XsUaxlWw";
+    const apiKey = "GEMINI APIKEY";
     
     const ai = new GoogleGenAI({ apiKey });
     
